@@ -49,7 +49,7 @@ const Navigation: React.FC = () => {
 
         const element = document.getElementById(section);
         if (element) {
-          const rect = element.getBoundingClientRect();
+          element.getBoundingClientRect();
           const offsetTop = element.offsetTop;
 
           // If section is in view (considering the hero height offset)
