@@ -18,7 +18,7 @@ export interface Project {
   description: string;
   fullDescription: string;
   tech: string[];
-  image: string;
+  image?: string;
   github?: string;
   report?: string;
   thesis?: string;
