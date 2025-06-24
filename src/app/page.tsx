@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Navigation from "./components/Navigation";
 import ScrollOverlay from "./components/ScrollOverlay";
+import * as React from "react";
 
 export default function Home(): JSX.Element {
   return (
