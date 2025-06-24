@@ -16,12 +16,13 @@ export interface SkillCategory {
 export interface Project {
   title: string;
   description: string;
+  fullDescription: string;
   tech: string[];
   image: string;
-  github: string;
-  report: string;
-  thesis: string;
-  essay: string;
+  github?: string;
+  report?: string;
+  thesis?: string;
+  essay?: string;
 }
 
 export interface Experience {
