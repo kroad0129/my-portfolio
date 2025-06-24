@@ -1,11 +1,11 @@
-import Hero from "./components/Hero"
-import About from "./components/About"
-import Skills from "./components/Skills"
-import Projects from "./components/Projects"
-import Experience from "./components/Experience"
-import Contact from "./components/Contact"
-import Navigation from "./components/Navigation"
-import ScrollOverlay from "./components/ScrollOverlay"
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Navigation from "./components/Navigation";
+import ScrollOverlay from "./components/ScrollOverlay";
 
 export default function Home(): JSX.Element {
   return (
@@ -32,5 +32,5 @@ export default function Home(): JSX.Element {
         </div>
       </div>
     </div>
-  )
+  );
 }

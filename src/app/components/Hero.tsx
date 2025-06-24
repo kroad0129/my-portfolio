@@ -1,91 +1,68 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-interface SocialLink {
-    href: string
-    icon: React.ReactNode
-    label: string
-}
+import type React from "react";
+import { useState, useEffect } from "react";
+import { Cloud } from "lucide-react";
 
 const Hero: React.FC = () => {
-    const socialLinks: SocialLink[] = [
-        {
-            href: "#",
-            icon: <span className="text-gray-700 text-xl">🐙</span>,
-            label: "GitHub",
-        },
-        {
-            href: "#",
-            icon: <span className="text-gray-700 text-xl">💼</span>,
-            label: "LinkedIn",
-        },
-        {
-            href: "#",
-            icon: <span className="text-gray-700 text-xl">📧</span>,
-            label: "Email",
-        },
-    ]
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const fullText = "BE 개발과 IoT, 기술창업에 관심이 많은 풀스택 개발자입니다";
 
-    return (
-        <section className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div className="space-y-8">
-                    <div className="space-y-4">
-                        <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-                            안녕하세요, <span className="text-blue-600">김태희</span>입니다
-                        </h1>
-                        <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-                            창의적이고 혁신적인 웹 솔루션을 만드는 풀스택 개발자입니다
-                        </p>
-                    </div>
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText]);
 
-                    <div className="flex justify-center space-x-6">
-                        {socialLinks.map((link: SocialLink, index: number) => (
-                            <a
-                                key={index}
-                                href={link.href}
-                                className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-                                aria-label={link.label}
-                            >
-                                {link.icon}
-                            </a>
-                        ))}
-                    </div>
+  return (
+    <section className="w-full h-full flex items-center justify-center relative overflow-hidden">
+      {/* Sky Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-sky-200 via-sky-100 to-white" />
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button
-                            onClick={() => {
-                                window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
-                            }}
-                            className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
-                        >
-                            프로젝트 보기
-                        </button>
-                        <button
-                            onClick={() => {
-                                const contactSection = document.getElementById("contact")
-                                if (contactSection) {
-                                    const offsetTop = contactSection.offsetTop + window.innerHeight
-                                    window.scrollTo({ top: offsetTop, behavior: "smooth" })
-                                }
-                            }}
-                            className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200"
-                        >
-                            연락하기
-                        </button>
-                    </div>
+      {/* Floating Clouds */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Large Background Clouds */}
+        <div className="absolute top-10 left-10 w-96 h-32 bg-white/40 rounded-full blur-sm animate-float" />
+        <div className="absolute top-32 right-20 w-80 h-28 bg-white/30 rounded-full blur-sm animate-float-delayed" />
+        <div className="absolute top-64 left-1/3 w-64 h-24 bg-white/35 rounded-full blur-sm animate-float" />
 
-                    {/* Scroll indicator */}
-                    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-                            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-                        </div>
-                    </div>
-                </div>
+        {/* Small Decorative Clouds */}
+        <Cloud className="absolute top-20 right-1/4 w-12 h-12 text-white/60 animate-float" />
+        <Cloud className="absolute top-80 left-1/4 w-8 h-8 text-white/50 animate-float-delayed" />
+        <Cloud className="absolute top-40 right-10 w-10 h-10 text-white/40 animate-float" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="space-y-8">
+          <div className="space-y-6">
+            <div className="inline-block">
+              <h1 className="text-5xl md:text-7xl font-bold text-sky-800 drop-shadow-sm">
+                안녕하세요,
+              </h1>
+              <h1 className="text-5xl md:text-7xl font-bold mt-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">
+                  김태희
+                </span>
+                <span className="text-sky-800">입니다</span>
+              </h1>
             </div>
-        </section>
-    )
-}
 
-export default Hero
+            <div className="h-16 flex items-center justify-center">
+              <p className="text-xl md:text-2xl text-sky-700 max-w-4xl mx-auto font-medium">
+                {displayText}
+                <span className="animate-pulse text-sky-600">|</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

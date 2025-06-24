@@ -26,5 +26,110 @@ body {
 }
 
 * {
-  cursor: url("/images/cat-paw-cursor.png")16 16, auto;
+  cursor: url("/images/cat-paw-cursor.png") 16 16, auto;
+}
+
+/* Sky Theme Animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-cloud-drift {
+  animation: cloud-drift 20s linear infinite;
+}
+
+/* Sky gradient backgrounds */
+.sky-gradient {
+  background: linear-gradient(to bottom, #87ceeb 0%, #e0f6ff 50%, #ffffff 100%);
+}
+
+.cloud-shadow {
+  box-shadow: 0 10px 25px rgba(135, 206, 235, 0.3);
+}
+
+/* Smooth scrolling parallax */
+.parallax-slow {
+  transform: translateY(var(--scroll-y, 0) * 0.5);
+}
+
+.parallax-medium {
+  transform: translateY(var(--scroll-y, 0) * 0.3);
+}
+
+.parallax-fast {
+  transform: translateY(var(--scroll-y, 0) * 0.1);
 }
