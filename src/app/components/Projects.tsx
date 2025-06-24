@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
         "AWS EC2 / S3 / IoT Core / Lamdba / API Gateway",
       ],
       image: "/images/project_homeiot.png",
-      github: "https://github.com/kroad0129/fitbit-iot",
+      github: "https://github.com/kroad0129/fitbit-iot", //수정
       report:
         "https://drive.google.com/file/d/17Tpvgf2jLOJygjyphp2wGA4ogzJaKNkI/view",
     },
