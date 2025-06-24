@@ -10,13 +10,13 @@ const About: React.FC = () => {
     const personalInfo: PersonalInfo[] = [
         { label: "이름", value: "김태희" },
         { label: "위치", value: "서울, 대한민국" },
-        { label: "이메일", value: "your.email@example.com" },
-        { label: "전화", value: "010-0000-0000" },
+        { label: "이메일", value: "kroad0129@naver.com" },
+        { label: "전화", value: "010-6740-0129" },
     ]
 
     return (
         <section id="about" className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-10 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
                     <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
@@ -30,7 +30,7 @@ const About: React.FC = () => {
                             좋아하고, 문제 해결을 통해 성장하는 것을 즐깁니다.
                         </p>
                         <p className="text-gray-600 leading-relaxed">
-                            프론트엔드와 백엔드 모두에 관심이 많으며, 효율적이고 확장 가능한 솔루션을 만드��� 것을 목표로 합니다.
+                            프론트엔드와 백엔드 모두에 관심이 많으며, 효율적이고 확장 가능한 솔루션을 만드는 것을 목표로 합니다.
                         </p>
 
                         <div className="grid grid-cols-2 gap-4 pt-4">

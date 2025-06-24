@@ -5,19 +5,32 @@ import Projects from "./components/Projects"
 import Experience from "./components/Experience"
 import Contact from "./components/Contact"
 import Navigation from "./components/Navigation"
+import ScrollOverlay from "./components/ScrollOverlay"
 
 export default function Home(): JSX.Element {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="relative">
       <Navigation />
-      <main>
+
+      {/* Fixed Hero Section with fade effect */}
+      <ScrollOverlay>
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
-      </main>
+      </ScrollOverlay>
+
+      {/* Scrollable Content that overlays Hero */}
+      <div className="relative z-10">
+        {/* Spacer to allow initial view of Hero */}
+        <div className="h-screen"></div>
+
+        {/* Content sections that will slide over Hero */}
+        <div className="bg-white shadow-2xl">
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+        </div>
+      </div>
     </div>
   )
 }

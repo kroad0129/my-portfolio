@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+* {
+  cursor: url("/images/cat-paw-cursor.png")16 16, auto;
+}
