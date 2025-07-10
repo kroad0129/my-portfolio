@@ -23,6 +23,7 @@ interface Project {
   report?: string;
   thesis?: string;
   essay?: string;
+  demo?: string;
   category: "project" | "sideproject" | "research";
 }
 
@@ -323,6 +324,17 @@ const Projects: React.FC = () => {
                 >
                   <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
                   에세이
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  className="text-sm group/btn flex items-center px-4 py-2 bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
+                  Demo
                 </a>
               )}
             </div>
