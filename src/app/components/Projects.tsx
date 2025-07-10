@@ -23,7 +23,6 @@ interface Project {
   report?: string;
   thesis?: string;
   essay?: string;
-  demo?: string;
   category: "project" | "sideproject" | "research";
 }
 
@@ -52,7 +51,7 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
-      title: "모두의냉장고",
+      title: "🍕 모두의냉장고",
       description: "대학생 간 나눔을 위한 실시간 채팅 기반 식품 공유 플랫폼",
       fullDescription:
         "대학생 간 나눔을 위한 실시간 채팅 기반 식품 공유 플랫폼입니다. 실시간 채팅과 위치 기반 서비스를 결합하여 음식물 낭비를 줄이고 대학생들 간의 나눔 문화를 촉진하는 공유 경제 플랫폼을 구축했습니다.",
@@ -64,20 +63,19 @@ const Projects: React.FC = () => {
       category: "project",
     },
     {
-      title: "KUSLS",
-      description:
-        "건국대학교 자유전공학부 학생을 위한, 진로를 잇는 연결 플랫폼",
+      title: "💊 Hi_Buy",
+      description: "건강기능식품 섭취 데이터기반 이커머스 플랫폼",
       fullDescription:
-        "진로를 고민하는 자유전공 학생들이 사람을 만나고, 정보를 얻고, 방향을 찾아가는 연결의 플랫폼 자유전공 학생들이 흩어진 조각들을 모아 나만의 진로를 그려나갈 수 있도록 함께합니다.",
-      tech: ["Spring Boot", "Android Studio", "Docker"],
-      image: "/images/project_kusls.png",
-      github: "https://github.com/KUmmIT-team2/KUSLS-Back",
+        "사용자의 건강 데이터를 분석하여 맞춤형 건강기능식품을 추천하는 서비스입니다. 개인의 건강 상태, 생활 패턴, 영양소 부족 정보를 종합적으로 분석하여 최적의 제품을 추천하고, 구매까지 연결하는 통합 플랫폼을 구축했습니다.",
+      tech: ["Android Studio", "Kotlin"],
+      image: "/images/project_hibuy.jpg",
+      github: "https://github.com/kroad0129/Hi_Buy",
       report:
-        "https://drive.google.com/file/d/1Yrm_88IR43MysQcCbFWh4n_yi3SwB7u8/view",
+        "https://drive.google.com/file/d/1mj3pa3l0ZLi2JtsvjApWENonAHUMkJw8/view",
       category: "project",
     },
     {
-      title: "Fitbit IoT",
+      title: "🏠 Fitbit IoT",
       description: "웨어러블 기반 홈IoT 모니터링",
       fullDescription:
         "Fitbit을 활용한 홈IoT 모니터링 플랫폼입니다. 웨어러블 디바이스와 IoT 센서를 연동하여 사용자의 생체 데이터와 환경 데이터를 실시간으로 수집하고 분석하여 스마트 홈 환경을 구축하는 프로젝트입니다.",
@@ -91,55 +89,50 @@ const Projects: React.FC = () => {
       github: "https://github.com/kroad0129/fitbit-iot",
       report:
         "https://drive.google.com/file/d/17Tpvgf2jLOJygjyphp2wGA4ogzJaKNkI/view",
-      category: "project",
+      category: "sideproject",
     },
     {
-      title: "Hi_Buy",
-      description: "건강기능식품 섭취 데이터기반 이커머스 플랫폼",
+      title: "🏋️ Fitpass",
+      description: "회원권 양도 서비스",
       fullDescription:
-        "사용자의 건강 데이터를 분석하여 맞춤형 건강기능식품을 추천하는 서비스입니다. 개인의 건강 상태, 생활 패턴, 영양소 부족 정보를 종합적으로 분석하여 최적의 제품을 추천하고, 구매까지 연결하는 통합 플랫폼을 구축했습니다.",
-      tech: ["Android Studio", "Kotlin"],
-      image: "/images/project_hibuy.jpg",
-      github: "https://github.com/kroad0129/Hi_Buy",
+        "사용하지 않는 헬스장 회원권을 다른 사용자에게 양도할 수 있는 플랫폼을 개발했습니다. 위치 기반 매칭, 안전한 거래 시스템, 실시간 채팅 기능을 통해 사용자 간 원활한 회원권 거래를 지원합니다.",
+      tech: ["Node.js", "Kotlin", "Firebase"],
+      image: "/images/project_fitpass.jpg",
+      github: "https://github.com/kroad0129/fitpass",
       report:
-        "https://drive.google.com/file/d/1mj3pa3l0ZLi2JtsvjApWENonAHUMkJw8/view",
+        "https://drive.google.com/file/d/1hvyuP48FZpvEu2LEdQj6cfpGpH-Fm1fs/view",
+      category: "sideproject",
+    },
+    {
+      title: "💄 LipService",
+      description: "AI 퍼스널 컬러 맞춤형 제품 추천",
+      fullDescription:
+        "AI를 활용하여 퍼스널 컬러에 따른 사용자 맞춤형 제품 추천 서비스입니다. 컴퓨터 비전 기술을 활용해 사용자의 피부톤을 분석하고, 머신러닝 알고리즘을 통해 개인에게 가장 어울리는 화장품을 추천하는 개인화 시스템을 구축했습니다.",
+      tech: ["Kotlin", "Python", "AI/ML", "OpenAI API"],
+      image: "/images/project_lipservice.jpg",
+      github: "https://github.com/kroad0129/lipservice",
+      report:
+        "https://drive.google.com/file/d/1mKYCahIGwqR_K4gZppTjKudkG1t0thay/view",
+      thesis:
+        "https://drive.google.com/file/d/1v3F8U3QipYXcZJI3fjsKR6ccu_6ovPxy/view",
       category: "project",
     },
     {
-      title: "BoyFriendFinder",
-      description: "남자친구가 안자고 게임 하는거 같다구요?",
+      title: "⚖️ NoonKo",
+      description: "법률 정보 검색 및 판례 유사도 분석",
       fullDescription:
-        "리그오브레전드 게임 유저의 닉네임만 입력하면, 실시간으로 게임 접속 상태와 최근 전적을 간편하게 조회할 수 있는 웹 서비스입니다.",
-      tech: ["Spring Boot", "Next.js", "Riot API"],
-      image: "/images/project_bff.png",
-      github: "https://github.com/kroad0129/bffinder",
-      demo: "http://52.79.236.6:3000/",
-      category: "sideproject",
+        "자연어 처리 기술을 활용하여 법률 문서의 유사도를 분석하는 서비스입니다. 복잡한 법률 용어와 판례를 일반인도 쉽게 이해할 수 있도록 분석하고, 유사한 사례를 찾아 법률 정보에 대한 접근성을 높이는 플랫폼을 개발했습니다.",
+      tech: ["React", "ETRI_BERT(NLP)"],
+      image: "/images/project_noonko.jpg",
+      github: "https://github.com/kroad0129/noonko",
+      report:
+        "https://drive.google.com/file/d/1fob5QRn9vgcNixoHTByyTvBq1PI0QcLs/view",
+      thesis:
+        "https://drive.google.com/file/d/1rgsw9NkbiUMw4mRant7kjX4OhxL8ZDOt/view",
+      category: "project",
     },
     {
-      title: "나만의 포트폴리오",
-      description: "나만의 포트폴리오 웹사이트 제작",
-      fullDescription:
-        "저만의 프로젝트와 경험을 한 곳에 정리하고 소개하기 위해 직접 포트폴리오 웹사이트를 제작했습니다.",
-      tech: ["React", "Next.js", "Tailwind CSS"],
-      image: "/images/project_my.png",
-      github: "https://github.com/kroad0129/my-portfolio",
-      demo: "https://my-portfolio-sigma-lemon-67.vercel.app/",
-      category: "sideproject",
-    },
-    {
-      title: "롤 내전 자동 팀매칭",
-      description: "친구들과 내전할때 팀 짜기 힘드신가요?",
-      fullDescription:
-        "입력된 포지션과 티어 정보를 바탕으로 리그오브레전드 팀을 자동으로 밸런스 있게 배정해주는 웹 서비스입니다.",
-      tech: ["Spring Boot", "Next.js", "Riot API"],
-      image: "/images/project_ltm.png",
-      github: "https://github.com/kroad0129/lol-team-matcher",
-      demo: "https://lol-team-matcher.vercel.app/",
-      category: "sideproject",
-    },
-    {
-      title: "헬스케어 시장의 파괴적 혁신: 기술 기반 기업의 전략 분석",
+      title: "✏️ 헬스케어 시장의 파괴적 혁신: 기술 기반 기업의 전략 분석",
       description:
         "4차 산업혁명 속 헬스케어 시장의 판도를 뒤흔든 파괴적 혁신과 그 전략적 특성을 분석한 연구",
       fullDescription:
@@ -151,7 +144,7 @@ const Projects: React.FC = () => {
     },
     {
       title:
-        "코로나 이후 세대의 직장 만족도에 영향을 미치는 요인 분석 (🏆수상)",
+        "✏️ 코로나 이후 세대의 직장 만족도에 영향을 미치는 요인 분석 (🏆수상)",
       description:
         "코로나19 이후 청년층의 직무 만족도에 영향을 미치는 주요 요인을 분석한 실증 연구",
       fullDescription:
@@ -326,17 +319,6 @@ const Projects: React.FC = () => {
                   에세이
                 </a>
               )}
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  className="text-sm group/btn flex items-center px-4 py-2 bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
-                  Demo
-                </a>
-              )}
             </div>
           </div>
         </div>
@@ -376,7 +358,7 @@ const Projects: React.FC = () => {
             {categories.map((category) => {
               const IconComponent = category.icon;
               const isActive = activeCategory === category.id;
-              const categoryProjects = getProjectsByCategory(category.id);
+              // const categoryProjects = getProjectsByCategory(category.id);
 
               return (
                 <button
