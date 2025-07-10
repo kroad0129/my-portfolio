@@ -7,7 +7,7 @@ import { Cloud } from "lucide-react";
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const fullText = "BE 개발과 IoT, 기술창업에 관심이 많은 풀스택 개발자입니다";
+  const fullText = "BE 개발과 IoT, 기술창업에 관심이 많은 백엔드 개발자입니다";
 
   useEffect(() => {
     if (currentIndex < fullText.length) {
@@ -45,6 +45,7 @@ const Hero: React.FC = () => {
                 안녕하세요,
               </h1>
               <h1 className="text-5xl md:text-7xl font-bold mt-2">
+                <span className="text-sky-800">함께 성장하는 </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">
                   김태희
                 </span>

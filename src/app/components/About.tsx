@@ -38,7 +38,7 @@ const About: React.FC = () => {
     { label: "대학교", value: "건국대학교", icon: "🏫" },
     { label: "전공", value: "스마트ICT융합공학과", icon: "💻" },
     { label: "부전공", value: "기술경영학", icon: "📊" },
-    { label: "위치", value: "서울, 대한민국", icon: "📍" },
+    { label: "위치", value: "서울, 강서구", icon: "📍" },
     { label: "이메일", value: "kroad0129@naver.com", icon: "📧" },
   ];
 
@@ -116,9 +116,17 @@ const About: React.FC = () => {
                       진행해왔습니다.
                     </p>
                     <p className="text-sky-600 leading-relaxed">
-                      현재 구름톤 유니브 4기 건국대학교 부대표로 활동하며,
-                      다양한 기술 스택을 활용한 풀스택 개발 역량을 키워나가고
-                      있습니다.
+                      저는 단순히 기능을 만드는 것보다, 사용자가 더 쉽게 쓰고
+                      편리하게 느낄 수 있는 서비스를 만드는 데 항상 신경 씁니다.
+                    </p>
+                    <p className="text-sky-600 leading-relaxed">
+                      팀 프로젝트를 할 때도, 실제로 사람들이 겪는 불편함이 뭔지
+                      함께 고민하고, 더 나은 방법이 없을지 팀원들과 자주 의견을
+                      나누는 걸 좋아합니다.
+                    </p>
+                    <p className="text-sky-600 leading-relaxed">
+                      앞으로도 기술을 통해 사람들의 일상을 조금 더 편리하게 바꿀
+                      수 있는 개발자가 되고 싶습니다.
                     </p>
                   </div>
                 </div>
