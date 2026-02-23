@@ -34,7 +34,7 @@ const ExperienceSection: React.FC = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     const element = document.getElementById("experience");
@@ -61,6 +61,14 @@ const ExperienceSection: React.FC = () => {
       description:
         "학술동아리에서 백엔드 개발자로 활동하며 다양한 프로젝트의 서버 개발과 데이터베이스 설계를 담당했습니다.",
       type: "academic",
+    },
+    {
+      title: "2025 딥다이브해커톤 대상",
+      organization: "kakao x goorm",
+      period: "2025",
+      description:
+        "“지역 불균형 해소를 위한 생활 속 문제 해결”을 주제로 지역 이슈 탐지 및 공유 서비스 OUTLINE을 개발하여 대상을 수상했습니다.",
+      type: "award",
     },
     {
       title: "2023 고용패널조사 브리프 경진대회 장려상",
@@ -206,7 +214,7 @@ const ExperienceSection: React.FC = () => {
               <div className="flex items-start justify-between mb-4">
                 <div
                   className={`flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(
-                    exp.type
+                    exp.type,
                   )}`}
                 >
                   {getTypeIcon(exp.type)}

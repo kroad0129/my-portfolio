@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const element = document.getElementById("projects");
@@ -104,6 +104,17 @@ const Projects: React.FC = () => {
       report:
         "https://drive.google.com/file/d/1mj3pa3l0ZLi2JtsvjApWENonAHUMkJw8/view",
       category: "project",
+    },
+    {
+      title: "playcock",
+      description: "플레이콕 연합동아리 배드민턴 관리 서비스",
+      fullDescription:
+        "배드민턴 활동에 있어 부원들의 게임 현황 관리를 할 수 있는 서비스입니다.",
+      tech: ["Spring Boot", "React", "AWS"],
+      image: "/images/project_playcock.png",
+      github: "https://github.com/kroad0129/playcock",
+      demo: "http://3.35.22.92/",
+      category: "sideproject",
     },
     {
       title: "BoyFriendFinder",
@@ -198,7 +209,7 @@ const Projects: React.FC = () => {
   const renderProjectCard = (
     project: Project,
     index: number,
-    categoryIndex: number
+    categoryIndex: number,
   ) => {
     const projectId = `${project.category}-${index}`;
 
@@ -426,7 +437,7 @@ const Projects: React.FC = () => {
               {/* Projects Grid */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {categoryProjects.map((project, index) =>
-                  renderProjectCard(project, index, 0)
+                  renderProjectCard(project, index, 0),
                 )}
               </div>
             </div>
